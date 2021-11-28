@@ -2,7 +2,6 @@ package Servidor;
 
 import java.net.ServerSocket;
 
-import Dominio.Usuario;
 
 public class EchoServer {
 	

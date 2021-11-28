@@ -4,9 +4,6 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
-import Dominio.Usuario;
-
-
 
 public class EchoClient {
 

@@ -3,6 +3,9 @@ package Servidor;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * This class process the request of each client as a separated Thread.
@@ -11,7 +14,7 @@ public class EchoService extends Thread {
 	private DataInputStream in;
 	private DataOutputStream out;
 	private Socket tcpSocket;
-
+	private ArrayList<Usuario> usuarios;
 	public EchoService(Socket socket) {
 		try {
 			this.tcpSocket = socket;
@@ -21,6 +24,26 @@ public class EchoService extends Thread {
 		} catch (Exception e) {
 			System.out.println("# EchoService - TCPConnection IO error:" + e.getMessage());
 		}
+		Usuario user0= new Usuario();
+		Usuario user1= new Usuario();
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		user0.setContrasenya("$!9PhNz,");
+		user0.setEmail("thomas.e2001@gmail.com");
+		user0.setFecha_ncto(new Date(2001,11,12));
+		user0.setFrecuencia("100");
+		user0.setName("Thomas");
+		user0.setPeso(100.0);
+		user0.setSesiones(null);
+		usuarios.add(user0);
+		
+//		user1.setContrasenya(getName());
+//		user1.setEmail(getName());
+//		user1.setFecha_ncto(null);
+//		user1.setFrecuencia(getName());
+//		user1.setName(getName());
+//		user1.setPeso(null);
+//		user1.setSesiones(null);
+		
 	}
 
 	public void run() {
