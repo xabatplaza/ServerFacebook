@@ -2,6 +2,8 @@ package Servidor;
 
 import java.net.ServerSocket;
 
+import Dominio.Usuario;
+
 public class EchoServer {
 	
 	private static int numClients = 0;
@@ -11,7 +13,8 @@ public class EchoServer {
 			System.err.println(" # Usage: TCPSocketEchoServer [PORT]");
 			System.exit(1);
 		}
-		
+		Usuario user = new Usuario();
+		System.out.println(user.getEmail());
 		//args[1] = Server socket port
 		int serverPort = Integer.parseInt(args[0]);
 		

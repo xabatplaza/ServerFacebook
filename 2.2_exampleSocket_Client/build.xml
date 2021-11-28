@@ -7,7 +7,7 @@
 
 	<property name="server.IP" value="127.0.0.1"/>
 	<property name="server.port" value="8001"/> 
-	<property name="message" value="is there anybody out there?"/>	
+	<property name="message" value="Esta el usuario con el email thomas.e2001@gmail.com registrado?"/>	
 	
 	<target name="1.compile" description="Builds the source code">
 		<delete dir="${build.dir}"/>

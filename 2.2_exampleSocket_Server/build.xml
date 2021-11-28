@@ -14,7 +14,7 @@
     </target>
 
 	<target name="2.echo server" description="Runs the Server Socket">
-		<java classname="es.deusto.ingenieria.sd.socket.echo.server.EchoServer" classpath="${classpath}" fork="true">
+		<java classname="Servidor.EchoServer" classpath="${classpath}" fork="true">
 	 		<arg value="${server.port}"/> 
         </java>
     </target>

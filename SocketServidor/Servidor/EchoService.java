@@ -29,10 +29,18 @@ public class EchoService extends Thread {
 			//Read request from the client
 			String data = this.in.readUTF();			
 			System.out.println("   - EchoService - Received data from '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data + "'");		
-			
+			String si= "Si esta";
+			String no= "No esta";
 			//Send response to the client
-			this.out.writeUTF(data.toUpperCase());			
-			System.out.println("   - EchoService - Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data.toUpperCase() + "'");
+			if (data.contains("thomas.e2001@gmail.com")){
+				this.out.writeUTF(si);			
+				System.out.println("   - EchoService - Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + si + "'");
+
+			}else {
+				this.out.writeUTF(no);			
+				System.out.println("   - EchoService - Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + no + "'");
+
+			}
 		} catch (Exception e) {
 			System.out.println("   # EchoService error" + e.getMessage());
 		} finally {

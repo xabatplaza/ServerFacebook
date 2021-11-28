@@ -4,11 +4,13 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
+import Dominio.Usuario;
+
+
 
 public class EchoClient {
 
 	public static void main(String args[]) {
-		
 		if (args.length < 3) {
 			System.err.println(" # Usage: TCPSocketClient [SERVER IP] [PORT] [MESSAGE]");
 			System.exit(1);
@@ -20,7 +22,6 @@ public class EchoClient {
 		int serverPort = Integer.parseInt(args[1]);
 		//argrs[2] = Message
 		String message = args[2];
-
 		/**
 		 * NOTE: try-with resources Statement - https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
 		 * Try statement that declares one or more resources. A resource is an object that must be closed after the program is 
