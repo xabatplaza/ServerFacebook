@@ -55,7 +55,7 @@ public class EchoService extends Thread {
 			String si= "Si esta";
 			String no= "No esta";
 			//Send response to the client
-			if (data.contains("thomas.e2001@gmail.com")){
+			if (data.contains("thomas.e2001@gmail.com") && data.contains("$!9PhNz,")){
 				this.out.writeUTF(si);			
 				System.out.println("   - EchoService - Sent data to '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + si + "'");
 
